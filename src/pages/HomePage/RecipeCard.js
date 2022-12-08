@@ -7,14 +7,19 @@ import {
     Image,
     ScaleFade,
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
+import { goToDetailsPage } from '../../routes/coordinator';
 
 const RecipeCard = (props) => {
     const { recipe } = props
+
+    const navigate = useNavigate()
 
     return (
         <ScaleFade initialScale={0.9} in={true}>
             <Center py={12}>
                 <Box
+                    onClick={() => goToDetailsPage(navigate, recipe.id)}
                     cursor="pointer"
                     role={'group'}
                     p={6}
