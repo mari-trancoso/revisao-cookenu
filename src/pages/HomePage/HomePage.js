@@ -52,7 +52,7 @@ const HomePage = () => {
         <>
             <Header />
             <Flex flexDir="column" paddingTop={5}>
-                <Heading>Receitas Cookenu</Heading>
+                <Heading>Receitas Cookenu by Mari</Heading>
                 <Flex flexWrap={"wrap"} justifyContent="space-between">
                     {recipes.map((recipe) => {
                         return <RecipeCard key={recipe.id} recipe={recipe} />
